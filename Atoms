@@ -1,0 +1,21 @@
+package spoj;
+
+import java.util.Scanner;
+
+public class Atoms {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int a=s.nextInt();
+		while(a-->0){
+			long n=s.nextLong(),k=s.nextLong(),m=s.nextLong();
+			if(n>=m){
+			System.out.println(0);
+			continue;
+			}	
+			System.out.println((long)(Math.log10((m/n))/Math.log10(k)));
+		}
+
+	}
+
+}
