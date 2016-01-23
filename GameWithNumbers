@@ -1,0 +1,18 @@
+package spoj;
+
+import java.io.*;
+
+public class GameWithNumbers {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader bi = new BufferedReader(new InputStreamReader(System.in));
+		int a=Integer.parseInt(bi.readLine()),k=a%10;
+		if(k!=0){
+			System.out.println(1);
+			System.out.println(k);
+		}
+		else
+			System.out.println(2);
+	}
+
+}
