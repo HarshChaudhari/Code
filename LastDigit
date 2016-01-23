@@ -1,0 +1,28 @@
+package spoj;
+
+import java.util.Scanner;
+
+public class LastDigit {
+
+	public static void main(String[] args) {
+		int n,k,c,ans;
+		long d;
+		Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		s.nextLine();
+		for(int b=0;b<n;b++)
+		{
+			String input[]=s.nextLine().split(" ");
+			c=(input[0].charAt(input[0].length()-1)-48);
+			d=Long.parseLong(input[1]);
+			k=(int) (d%4);
+			if(k==0 && d!=0)
+				ans=(int)Math.pow(c,4)%10;
+			else
+				ans=(int)Math.pow(c,k)%10;
+			System.out.println(ans);
+		}
+
+	}
+
+}
