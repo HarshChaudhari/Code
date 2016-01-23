@@ -1,0 +1,53 @@
+package spoj;
+
+import java.util.Scanner;
+
+public class VeryEasyPBLM {
+	static String a="";
+	static String st;
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int b=7;
+		while(b-->0){
+		int n=s.nextInt();
+		String st="",a="";
+		
+		while(n!=0){
+		int k=(int) (Math.log10(n)/Math.log10(2));
+		System.out.print("2(");
+		rec(k);
+		n=n-(int)Math.pow(2, k);
+		if(n!=0)
+		System.out.print(") + ");
+		else
+			System.out.println(")");
+		}
+		}
+	}
+
+	public static void rec(int n) {
+		int count=0,m=n;
+		for(;n!=0 && n!=1 && n!=2;){
+		int k=(int) (Math.log10(n)/Math.log10(2));
+		count=count+(int)Math.pow(2,k);
+		if(count>=m){
+		if(k==0)
+			System.out.print(" 2(0)");
+		else if(k==1)
+			System.out.print(" 2");
+		else
+			System.out.print(" 2("+(k)+")");
+		}
+		else
+		{
+			if(k==0)
+				System.out.print("2(0) + ");
+			else if(k==1)
+				System.out.print("2 +");
+			else
+			System.out.print("2("+(k)+") + ");
+		}
+		n=n-k;
+		}
+	}
+}
