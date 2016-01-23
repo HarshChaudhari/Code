@@ -1,0 +1,15 @@
+package spoj;
+
+import java.util.Scanner;
+
+public class PigeonHoleTower {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt(),k=n;
+		while(n-->0){
+			long l=s.nextLong();
+			System.out.println("Case "+(k-n)+": "+(int)(Math.sqrt(l+1)-1));
+		}
+	}
+}
