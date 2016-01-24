@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BlackWidow {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int t=s.nextInt();
+		while(t-->0){
+			int n=s.nextInt(),i=0,maxr=0;
+			int R[]=new int[n];
+			for(int a=0;a<n;a++){
+				int k=s.nextInt(),l=s.nextInt();;
+				if(k>maxr){
+					maxr=k;
+					i=a+1;
+				}
+				R[a]=l;
+				s.nextLine();
+			}
+			R[i-1]=0;
+			Arrays.sort(R);
+			if(R[n-1]<maxr)
+				System.out.println(i);
+			else
+				System.out.println("-1");
+		}
+
+	}
+
+}
