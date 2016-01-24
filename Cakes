@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Cakes {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		while(true){
+			int a[]=new int[8];
+			for(int b=0;b<8;b++)
+				a[b]=s.nextInt();
+			if(a[0]==-1)
+				break;
+			int e=a[0]/a[4],f=a[1]/a[5],s1=a[2]/a[6],m=a[3]/a[7];
+			int c=Math.max(e, Math.max(f,Math.max(s1, m)));
+			while(((c*a[4]-a[0])<0 || (c*a[5]-a[1])<0 || (c*a[6]-a[2])<0 || (c*a[7]-a[3])<0))
+				c++;
+			System.out.println((c*a[4]-a[0])+" "+(c*a[5]-a[1])+" "+(c*a[6]-a[2])+" "+(c*a[7]-a[3]));
+		}
+		
+
+	}
+
+}
