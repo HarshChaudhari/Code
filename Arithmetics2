@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Arithmetics2 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int t=Integer.parseInt(s.nextLine());
+		s.nextLine();
+		while(t-->0){
+			String in=s.nextLine();
+			in=in.replaceAll(" ", "");
+			char m[]=in.toCharArray();
+			System.out.println(m[0]+""+m[1]+""+m[2]);
+		}
+
+	}
+
+}
