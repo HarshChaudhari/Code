@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class HPYNOS {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int check[]=new int[730];
+		int count=0;
+		while(check[n]!=1){
+			check[n]=1;
+			int sum=0;
+			while(n!=0){
+				sum+=(int)((n%10)*(n%10));
+				n=n/10;
+			}
+			//System.out.println(sum);
+			n=sum;
+			count++;
+			if(sum==1){
+				System.out.println(count);
+				break;
+			}
+		}
+		if(check[n]==1)
+			System.out.println("-1");
+	}
+
+}
