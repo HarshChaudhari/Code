@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+	static long min,max;
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		long n=s.nextLong(),k;
+		while(n-->0){
+			k=s.nextLong();
+			double t=(Math.log10(((double)k/2+1))/(Math.log10(2)));
+			long l=(long)t;
+			if(t>l){
+				l++;
+			}
+			min=(2*((long)Math.pow(2, l-1)-1))+1;
+			max=(2*((long)Math.pow(2, l)-1));
+			for(long a=0;a<l;a++){	
+				double avg=(double)(min+max)/2;
+				if(k>avg)
+				{	
+					System.out.print("6");
+					min=(long) avg;
+				}
+				else{
+					System.out.print("5");
+					max=(long) avg;
+				}	
+			}
+			System.out.println();
+		}
+
+	}
+}
